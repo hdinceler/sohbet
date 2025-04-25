@@ -3,7 +3,7 @@ console.clear();
 const WebSocket = require('ws');
 const {v4:uuidv4}=require('uuid'); // benzersiz user id ler için
 
-const wsServer=new WebSocket.Server({port:3000})
+const wsServer=new WebSocket.Server({port:3001})
 
 const wsClients=[];
 
