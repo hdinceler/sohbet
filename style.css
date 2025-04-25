@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'ozelFont';
+    src: url('./fonts/PlaypenSans-Regular.ttf');
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: 'ozelFont';
+    text-align: center;
+    display: block;
+    color:orangered;
+    text-shadow: 0 0 4px orangered;
+}
+body{
+    background-color:rgba(255, 255, 0, 0.197);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mesajPanosu{
+    font-family: 'ozelFont';
+    height:400px;
+    width:90%;
+    background-color: rgba(255, 255, 0, 0.32);
+    font-size: 1.3rem;
+    padding: 10px;
+    text-indent: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+}
+#mesajYaz{
+    font-family: 'ozelFont';
+    height:96px;
+    margin-top:1rem;
+    width:90%;
+    background-color: rgba(255, 255, 0, 0.32);
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+    display:flex;
+    justify-content: space-between;
+}
+#gidecekMesaj{
+    width:90%;
+    border:1px solid grey;
+    border-radius: 10px;
+    padding:10px;
+    font-family: 'ozelFont';
+    background-color: rgb(239, 239, 151);
+}
+#gonder{
+    margin-left:0.5rem;
+    width: 10%;
+    height:100%;
+    min-width:6rem;
+    border:0;
+    border-radius: 10px;
+    background-color: greenyellow;
+    font-family: 'ozelFont';
+    font-size: large;
+    box-shadow: 2px 2px 4px grey;
+}
+#gonder:hover{
+    background-color: rgb(176, 243, 76);
+    cursor: pointer;
+    box-shadow: 0 0 0px grey;
+}
+#navBar{
+    background-color: ;
+    top:0;
+    height:4rem;
+    width: 100%;
+    z-index:999;
+    display:flex;
+    align-items: flex-start;
+    opacity: 0.8;
+}
+.navBarItem{
+    padding:0.2rem;
+    width:4rem;
+    position: relative;
+}
+.navBarItem img{
+    position: absolute;
+    height:4rem;
+    width:100%;
+    display:block;
+    padding:0.2rem;
+}
+#gelenMesajlar{
+    width: 90%;
+    height:90%;
+    border-radius: 10px;
+    background-color:  rgba(255, 255, 0, 0.32);
+    border:0;
+    font-family:'ozelFont' ;
+    font-size: large;
+}
