@@ -3,6 +3,7 @@
     src: url('./fonts/PlaypenSans-Regular.ttf');
 }
 *{
+    cursor: none;
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -100,4 +101,21 @@ body{
     border:0;
     font-family:'ozelFont' ;
     font-size: large;
+}
+#topRakip{
+    height: 100px;
+    width:100px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 9999;
+    position: absolute;
+}
+
+#topBen{
+    height: 100px;
+    width:100px;
+    background-color: rgb(26, 255, 0);
+    border-radius: 50%;
+    z-index: 9999;
+    position: absolute;
 }
