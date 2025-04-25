@@ -2,13 +2,21 @@ window.onload=()=>{
     const gonderButonu=document.getElementById('gonder');
     const gidecekMesaj=document.getElementById('gidecekMesaj');    
     const gelenMesajlar=document.getElementById('gelenMesajlar')
-    
-    const ws= new WebSocket('ws://192.168.166.36:3000');
+    const topRakip= document.getElementById('topRakip');
+    const topBen= document.getElementById('topBen');
+
+    const ws= new WebSocket('ws://192.168.1.100:3000');
 
     ws.addEventListener('message',(event)=>{
-        const mesajSatiri='->'+event.data+'\n';
-        gelenMesajlar.value+=mesajSatiri;
-        gelenMesajlar.scrollTop=gelenMesajlar.scrollHeight;
+        const gelenMesaj=JSON.parse(event.data)
+
+        // const mesajSatiri='->'+event.data+'\n';
+        // gelenMesajlar.value+=mesajSatiri;
+        // gelenMesajlar.scrollTop=gelenMesajlar.scrollHeight;
+        
+        topRakip.style.left=gelenMesaj.x+'px'
+        topRakip.style.top=gelenMesaj.y +'px'
+        
     })
 
     ws.onopen=()=>{ console.log("sunucuya bağladı:)"); }
@@ -28,5 +36,14 @@ window.onload=()=>{
             e.preventDefault();
             mesajGonder();
         }
-    })
+    });
+    document.addEventListener('mousemove', function(e) {
+        const x = e.clientX; // pencere içinde X konumu
+        const y=e.clientY;
+        const position= {x,y}
+        ws.send( JSON.stringify(position))
+                
+        topBen.style.left=x+'px'
+        topBen.style.top=y +'px'
+      });
 }
